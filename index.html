@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Responsive Web Design. Grid layout.</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Ewelai">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h3>Responsive Web Design. Grid layout.</h3>
+				<p>
+					<small>Created by <a href="https://github.com/Ewelai">Olya Sazonova</a></small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Responsive Web Design</h2>
+				<p>
+					Responsive web design is an approach to web page creation that makes use of flexible layouts, flexible images and
+					cascading style sheet media queries. The goal of responsive design is to build web pages that detect the visitor’s
+					screen size and orientation and change the layout accordingly.
+				</p>
+				<img src="./image/Responsive Web Design.jpg" alt="Responsive Web Design">
+			</section>
+
+			<!-- Example of nested vertical slides -->
+			<section>
+				<section>
+					<h2>What does Responsive Web Design consist of?</h2>
+					<ul>
+						<li>We should set up a web page’s viewport meta this way:</li>
+					</ul>
+					<section data-markdown>
+						<script type="text/template">
+							```
+							<meta name="viewport" content="width=device-width, initial-scale=1.0">
+							```
+						</script>
+					</section>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<p>We should know of that we shall make use of max-width property to make our images or other elements scalable.</p>
+					<section data-markdown>
+						<script type="text/template">
+							```
+							<img src="image/max-width-prop.png" style="max-width:100%;height:auto;">
+							```
+						</script>
+					</section>
+				</section>
+				<section>
+					<img src="./image/max-width-prop.png" alt="max-width-prop" height="400">
+				</section>	
+			</section>
+			
+			<section>
+				<section>
+					<p>Responsive text size. The text can be set with for example “vw” unit, which means the “viewport width”. That way the text size will follow the size of the browser window</p>
+					<section data-markdown>
+						<script type="text/template">
+							```
+							<h1 style="font-size:10vw">Hello World</h1>
+							```
+						</script>
+					</section>
+				</section>
+				<section>
+					<img src="./image/responsive-text.png" alt="Text">
+				</section>
+			</section>
+
+			<section>
+				<h2>Advantages of Responsive Web Design</h2>
+				<ul>
+					<li class="fragment fade-right">Optimal display of pages width all elements and full functionality.</li>
+					<br>
+					<li class="fragment fade-right">A single URL for the regular version and page with adaptive layout, user redirection is not required.</li>
+					<br>
+					<li class="fragment fade-right">Saving content, no duplication in different versions, possibility of SEO-optimization.</li>
+					<br>
+					<li class="fragment fade-right">Improving behavioral metrics of the site.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Disadvantages of Responsive Web Design</h2>
+				<ul>
+					<li class="fragment fade-up">High complexity of the process.</li>
+					<br>
+					<li class="fragment fade-up">The Responsive website takes a longer time to download on the small screen.</li>
+					<br>
+					<li class="fragment fade-up">A responsive website will operate as per the media queries that give information about the screen size it is
+						being viewed on. Many older browsers do not support such media queries.</li>
+				</ul>
+			</section>
+
+			<section>
+				<section>
+					<h2>Grid layout</h2>
+					<p>CSS Grid Layout is the most powerful layout system available in CSS. It is a two-dimensional system, meaning it
+						can handle both columns and rows, unlike flexbox which is largely a one-dimensional system. You work with Grid
+						Layout by applying CSS rules both to a parent element and to that elements children.</p>
+				</section>
+				<section>
+					<img src="image/grid.jpg" alt="Grid">
+				</section>
+			</section>
+
+			<section>
+				<h2>Browser Support</h2>
+				<p>Browser support can be found at this link.</p>
+				<a href="https://caniuse.com/#feat=css-grid">Browser Support</a>
+			</section>
+
+			<section>
+				<h2>Advantages of Grid layout</h2>
+				<ul>
+					<li class="fragment fade-down">A grid can add better alignment, balance, and equality in spacing for a much better visual experience.</li>
+					<br>
+					<li class="fragment fade-down">The wireframe is directly implemented into the design phase.</li>
+					<br>
+					<li class="fragment fade-down">It is a great way to keep track of nested grids (grids within the main grid).</li>
+					<br>
+					<li class="fragment fade-down">There is enough organization to easily switch around pieces of content and features. With little to no design adjustments.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Disadvantages of Grid layout</h2>
+				<ul>
+					<li class="fragment fade-in-then-out">Many older browsers don’t support grid technology, so this makes it difficult to view content in older browsers.</li>
+						<br>
+					<li class="fragment fade-in-then-out">Potentially, grids can get in the way of creativity. While it can promote alignment and organization, some designs just call for more abstraction.</li>
+						<br>
+					<li class="fragment fade-in-then-out">The use of a grid requires a decent amount of content and visual elements. Without them, there is really no reason for a grid.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Properties of Grid layout</h2>
+				<ul>
+					<li class="fragment">Grid display</li>
+					<li class="fragment">Grid rows</li>
+					<li class="fragment">Grid columns</li>
+					<li class="fragment">Grid gaps</li>
+					<li class="fragment">Grid area</li>
+				</ul>
+			</section>
+
+			<section>
+				<section>
+					<h2>Display property</h2>
+					<section data-markdown>
+						<script type="text/template">
+							```
+							<section class="grid-container">
+								<div class="grid-item">A</div>
+								<div class="grid-item">B</div>
+								<div class="grid-item">C</div>
+							</section>
+							```
+							```
+							.grid-container {
+								display: grid;
+								border-radius: 5px;
+								padding: 10px;
+								border: 3px solid rgb(57, 207, 12);
+							}
+							```
+							```
+							.grid-item {
+								margin-bottom: 5px;
+								color: #FFF;
+								font-size: 30px;
+								border:2px solid grey;
+								border-radius: 5px;
+							}
+							```
+						</script>
+					</section>
+				</section>
+				<section>
+					<img src="image/prop-display.png" alt="Display">
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Grid Rows</h2>
+					<p>The <em>horizontal line</em> of grid items.</p>
+					<section data-markdown>
+						<script type="text/template">
+							```
+							<section class="grid-container">
+								<div class="grid-item">A</div>
+								<div class="grid-item">B</div>
+								<div class="grid-item">C</div>
+							</section>
+							```
+							```
+							.grid-container {
+								display: grid;
+								grid-template-rows: 1fr 2fr;
+							}
+							```
+						</script>
+					</section>
+				</section>
+				<section>
+					<img src="image/prop-grid-row.png" alt="Grid columns">
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Grid Columns</h2>
+					<p>The <em>vertical line</em> of grid items.</p>
+					<section data-markdown>
+						<script type="text/template">
+							```
+							<section class="grid-container">
+								<div class="grid-item">A</div>
+								<div class="grid-item">B</div>
+								<div class="grid-item">C</div>
+							</section>
+							```
+							```
+							.grid-container {
+								display: grid;
+								grid-template-columns: 1fr 1fr;
+							}
+							```
+						</script>
+					</section>
+				</section>
+				<section>
+					<img src="image/prop-grid-col.png" alt="Grid gap">
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Grid Gaps</h2>
+					<p>This property will put blank <em>space</em> between every row and column in the grid</p>
+					<section data-markdown>
+						<script type="text/template">
+							```
+							<section class="grid-container">
+								<div class="grid-item">A</div>
+								<div class="grid-item">B</div>
+								<div class="grid-item">C</div>
+							</section>
+							```
+							```
+							.grid-container {
+								display: grid;
+								grid-gap: 30px;
+								grid-template-columns: 1fr 1fr;
+							}
+							```
+						</script>
+					</section>
+				</section>
+				<section>
+					<img src="image/prop-grid-gap.png" alt="Grid gap">
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Grid Area</h2>
+					<p>This property will set the starting and ending positions for both the rows and columns of an item</p>
+					<section data-markdown>
+						<script type="text/template">
+							```
+							<section class="grid-container">
+								<div class="grid-item">A</div>
+								<div class="grid-item">B</div>
+								<div class="grid-item">C</div>
+							</section>
+							```
+							```
+							.grid-container {
+								display: grid;
+								grid-template-columns: 1fr 1fr;
+							}
+							```
+							```
+							.grid-item {
+								grid-area: 1 / span 2;
+							}
+							```
+						</script>
+					</section>
+				</section>
+				<section>
+					<img src="image/prop-grid-area.png" alt="Grid gap">
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Fraction</h2>
+					<p>Bands can be defined using any length unit. Grid also introduces an additional length unit to help us create
+						flexible grid tracks. The new - <em>fr</em> unit represents a fraction of the available space in the grid container.</p>
+					<section data-markdown>
+						<script type="text/template">
+							```
+							.grid-container {
+								display: grid;
+								grid-template-columns: 1fr 1fr;
+							}
+							```
+						</script>
+					</section>
+				</section>
+			</section>
+
+			<section>
+				<h2>Value of Properties</h2>
+				<ul>
+					<li class="fragment">Repeat</li>
+					<li class="fragment">Minmax</li>
+				</ul>
+			</section>
+
+			<section>
+				<section>
+					<h2>Repeat()</h2>
+					<p>The properties that <em>define the number of rows and columns</em> in a grid can take a function as a value</p>
+					<section data-markdown>
+						<script type="text/template">
+							```
+							<section class="grid-container">
+								<div class="grid-item">A</div>
+								<div class="grid-item">B</div>
+								<div class="grid-item">C</div>
+								<div class="grid-item">D</div>
+							</section>
+							```
+							```
+							.grid-container {
+								display: grid;
+								grid-template-columns: repeat(2, 1fr);
+							}
+							```
+						</script>
+					</section>
+				</section>
+				<section>
+					<img src="image/grid-value-repeat.png" alt="Reapeat">
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Minmax()</h2>
+					<p>When setting up an explicit grid or defining the sizing for <em>automatically created rows or columns</em> we may want
+						to give tracks a minimum size, but also ensure they expand to fit any content that is added.</p>
+					<section data-markdown>
+						<script type="text/template">
+							```
+							<section class="grid-container">
+								<div class="grid-item">A</div>
+								<div class="grid-item">B</div>
+								<div class="grid-item">C</div>
+								<div class="grid-item">D</div>
+							</section>
+							```
+							```
+							.grid-container {
+								display: grid;
+								grid-template-columns: minmax(100px, auto);
+							}
+							```
+						</script>
+					</section>
+				</section>
+				<section>
+					<img src="image/grid-value-minmax-1.png" alt="Minmax">
+					<img src="image/grid-value-minmax-2.png" alt="Minmax">
+				</section>
+			</section>
+
+			<section>
+				<h2>Review</h2>
+			</section>
+
+			<section>
+				<h2>Resporsive Web Design</h2>
+					<ul>
+						<li class="fragment fade-left"><em>Responsive Web Design</em>  is about using HTML and CSS to automatically resize, hide, shrink, or enlarge, a website, to make it look good on all devices (desktops, tablets, and phones).</li>
+							<br>
+						<li class="fragment fade-left"><em>Responsive Web Design</em> is more comfortable for users because have optimal display of pages’ width all elements and full functionality.</li>
+					</ul>
+			</section>
+
+			<section>
+				<h2>Grid layout</h2>
+				<ul>
+					<li class="fragment fade-down"><em>grid-template-columns</em> defines the number and sizes of the columns of the grid. Shorthand property is grid-column.</li>
+					<li class="fragment fade-down"><em>grid-template-rows</em> defines the number and sizes of the rows of the grid. Shorthand property is grid-row.</li>
+					<li class="fragment fade-down"><em>grid-gap</em> puts blank space between rows and/or columns of the grid.</li>
+					<li class="fragment fade-down"><em>grid-area</em> is a shorthand for grid-row-start, grid-column-start, grid-row-end, and grid-column-end, all in one line.</li>
+					<li class="fragment fade-down"><em>repeat()</em> define the number of rows and columns in a grid can take a function as a value.</li>
+					<li class="fragment fade-down"><em>minmax()</em> define the sizing for automatically created rows or columns. We may want to give tracks a minimum size, but also ensure they expand to fit any content that is added.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Useful links here!</h2>
+			</section>
+
+			<section>
+				<h2>Watch the Responsive Web Design sites:</h2>
+				<ul>
+					<li><a href="https://css-tricks.com">CSS Tricks</a></li>
+					<li><a href="http://time.com">Time</a></li>
+					<li><a href="https://teamtreehouse.com">Team Tree House</a></li>
+					<li><a href="https://www.khanacademy.org">Khan Academy</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Learn more about Grid layout properties on: </h2>
+				<ul>
+					<li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Tricks</a></li>
+					<li><a href="https://www.w3schools.com/css/css_grid.asp">W3C</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Thank you for watching!</h2>
+			</section>
+
+		</div>
+
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [{
+					src: 'lib/js/classList.js',
+					condition: function () {
+						return !document.body.classList;
+					}
+				},
+				{
+					src: 'plugin/markdown/marked.js',
+					condition: function () {
+						return !!document.querySelector('[data-markdown]');
+					}
+				},
+				{
+					src: 'plugin/markdown/markdown.js',
+					condition: function () {
+						return !!document.querySelector('[data-markdown]');
+					}
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					}
+				},
+				{
+					src: 'plugin/search/search.js',
+					async: true
+				},
+				{
+					src: 'plugin/zoom-js/zoom.js',
+					async: true
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				}
+			]
+		});
+
+	</script>
+
+</body>
+
+</html>
